@@ -19,7 +19,10 @@ class Solution:
     if x > pow(2,31) - 1 or x < -2**31:
       return 0
     nums = list()
-    print(x)
+    single = 1
+    if x < 0:
+      single = -1
+      x = -x
     while x > 0:
       pop = x % 10
       x //= 10
@@ -28,10 +31,9 @@ class Solution:
     nums.reverse()
     while len(nums) > 0:
       reverse_num  =  reverse_num * 10 + nums.pop()
-    print(reverse_num)
-    return nums
+    return reverse_num * single
 
 if __name__ == "__main__":
   s = Solution()
-  s.reverse(123)
+  assert -321 == s.reverse(-123)
 
