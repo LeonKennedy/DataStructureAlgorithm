@@ -16,21 +16,40 @@ class Solution:
         out = 0
         sign = 1
         i = 0
-        while not (str[i] >= '0' and str[i] <= '9'):
-            i += 1 
-        if i>0 and str[i-1] == '-':
+        for c in str:
+          if c == ' ':
+            i += 1
+          else:
+            break
+        if len(str[i:])  == 0:
+          return 0
+        if str[i] == '-':
             sign = -1
+            i += 1
+        elif str[i] == '+':
+            sign = -1
+            i += 1
+        if len(str[i:])  == 0:
+          return 0
         for c in str[i:]:
             if c >= '0' and c <= '9':
                 out = out * 10 + int(c)
             else:
-                return out * sign
+                break
+        if out * sign > 2**31 - 1:
+            return 2**31 -1
+        if out * sign < -2**31:
+            return -2**31
         return out * sign
                 
               
 
 if __name__ == "__main__":
   s = Solution()
-  string = ' -b   234 efji 123'
+  string = '    -234 efji 123'
+  string = ' '
+  string = ''
+  string = '-'
+  string = '+1'
   print(s.myAtoi(string))
-  assert 234 == s.myAtoi(string)
+  assert -234 == s.myAtoi(string)
