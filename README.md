@@ -10,7 +10,8 @@ coding practise
 #### sort
 排序算法
 
-+ merge_sort  归并排序
++ MergeSort  归并排序
++ QuickSort   原地快排
 
 
 #### other
