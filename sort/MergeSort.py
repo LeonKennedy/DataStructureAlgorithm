@@ -10,6 +10,7 @@ from typing import List
 import random
 import array
 
+
 class MergeSort:
 
     def merge_sort(self, data: array, ascending=True) -> List:

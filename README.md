@@ -12,6 +12,8 @@ coding practise
 
 + MergeSort  归并排序
 + QuickSort   原地快排
++ BucketSort  桶排序
++ CountingSort 计数排序
 
 
 #### other
