@@ -15,6 +15,9 @@ coding practise
 + BucketSort  桶排序
 + CountingSort 计数排序
 
+#### tree
+树
++ TraversingBinaryTree  完全二叉树遍历
 
 #### other
 + linked_list   
