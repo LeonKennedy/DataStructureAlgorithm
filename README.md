@@ -18,6 +18,13 @@ coding practise
 #### tree
 树
 + TraversingBinaryTree  完全二叉树遍历
++ BaseTree   二叉树
+    - min
+    - max
+    - successor
+    - predecessor
+    - append
+    - pop
 
 #### other
 + linked_list   
