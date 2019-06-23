@@ -5,6 +5,7 @@
 # @Description: 
 # @Create: 2019-06-18 20:05
 # @Last Modified: 2019-06-18 20:05
+import random
 
 
 class Node:
@@ -16,6 +17,8 @@ class Node:
     def __init__(self, value):
         self.value = value
 
+    def __str__(self):
+        return self.value
 
 class BinaryTree:
 
@@ -48,38 +51,44 @@ class BinaryTree:
             y.right = new_node
 
     def pop(self, value):
-        if self._head.value == value:
-            self._head = self._find_son(self._head)
-        else:
-            self._search(self._head, value)
-        return value
+        node = self._search(self._head, value)
+        self._pop(node)
+
+    def _pop(self, node):
+        if node.left is None:
+            self._transplant(node, node.right)
+            return
+        if node.right is None:
+            self._transplant(node, node.left)
+            return
+        successor = self.successor(node.value)
+        if successor.p != node:
+            self._transplant(successor, successor.right)
+            successor.right = node.right
+            successor.right.p = successor
+        self._transplant(node, successor)
+        successor.left = node.left
+        successor.left.p = successor
+
+    def _transplant(self, old_node, new_node):
+        parents = old_node.p
+        if parents.left == old_node:
+            parents.left = new_node
+        elif parents.right == old_node:
+            parents.right = new_node
+        if new_node is not None:
+            new_node.p = parents
 
     def _search(self, node, value) -> Node:
         x = node
-        while x.value is not None:
+        while x is not None:
             if x.value > value:
                 x = x.left
             elif x.value == value:
                 return x
             else:
                 x = x.right
-        raise ValueError(f"value({value} is not exist!")
-        # if node.value > value:
-        #     if node.left is None:
-        #         raise ValueError(f'value({value}) not exsist')
-        #     if node.left.value == value:
-        #         son = self._find_son(node.left)
-        #         node.left = son
-        #     else:
-        #         self._search(node.left, value)
-        # else:
-        #     if node.left is None:
-        #         raise ValueError(f'value({value}) not exsist')
-        #     if node.right.value == value:
-        #         son = self._find_son(node.right)
-        #         node.right = son
-        #     else:
-        #         self._search(node.right, value)
+        raise ValueError(f"value({value}) is not exist!")
 
     def _find_son(self, node):
         if node.left is Node:
@@ -109,10 +118,10 @@ class BinaryTree:
         node = self._search(self._head, value)
         if node.right is not None:
             return node.right
-        x = node.p
-        while x.p.left != x:
+        x = node
+        while x.p is not None and x.p.left != x:
             x = x.p
-        return x.p
+        return None if x.p is None else x.p
 
     def predecessor(self, value):
         pass
@@ -170,14 +179,17 @@ class BinaryTree:
 
 if __name__ == "__main__":
     tree = BinaryTree()
-    for i in 'HEIDJGHTASBEABC':
+    items = 'MHIPODJGTRASBECX'
+    for i in items:
         tree.append(i)
     print(tree)
     print(f"max: {tree.min}")
     print(f"min: {tree.max}")
     print('------')
-    tree.pop('H')
-    print(tree)
-    print(tree.successor('H').value)
+    item = random.choice(items)
+    succ = tree.successor(item)
+    print(f" {item} successor is: {succ.value if succ else None}")
+    tree.pop(item)
+    print(f"after pop {item} : {tree}")
     # tree.pop('F')
 
