@@ -29,3 +29,6 @@ coding practise
 #### other
 + linked_list   
 + BinarySearch   二分查找
++ Knapsack 0-1背包
+    - 回溯
+    - 动态规划
