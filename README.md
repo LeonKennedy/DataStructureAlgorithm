@@ -31,4 +31,4 @@ coding practise
 + BinarySearch   二分查找
 + Knapsack 0-1背包
     - 回溯
-    - 动态规划
+    - 动态规划  还要找出组合
