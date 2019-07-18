@@ -1,15 +1,12 @@
 #!/usr/bin/env python
 #-*- coding: utf-8 -*-
-# @Filename: linked_list.py
+# @Filename: LinkedList.py
 # @Author: olenji - lionhe0119@hotmail.com
 # @Description: ---
 # @Create: 2019-06-08 09:57:42
 # @Last Modified: 2019-06-08 09:57:42
 #
 
-from collections import namedtuple
-
-#Node = namedtuple('node', ['value', 'point'])
 
 class Node:
     def __init__(self, value, point):
@@ -19,8 +16,8 @@ class Node:
     def __repr__(self):
         return fr"[Node({id(self)})-({self.value})]"
 
-class LinkedList:
 
+class LinkedList:
     def __init__(self):
         self._sential = Node(None,None)
         #assert(self._tail == Node(None, None))
@@ -51,7 +48,6 @@ class LinkedList:
             cursor = cursor.point
 
         raise ValueError(f'value({value}) not found')
-
 
     def push(self, value):
         new_node = Node(value, self._head.point)

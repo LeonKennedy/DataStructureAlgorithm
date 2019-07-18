@@ -9,7 +9,7 @@ coding practise
 
 #### list&linked
 + OrderedList  有序数组
-
++ linked_list  链表
 
 #### sort
 排序算法
@@ -34,7 +34,7 @@ coding practise
 + Dijkstra  迪斯特拉算法
     
 #### other
-+ linked_list   
+  
 + BinarySearch   二分查找
 + Knapsack 0-1背包
     - 回溯
