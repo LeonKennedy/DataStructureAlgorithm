@@ -7,5 +7,6 @@
 19. Remove Nth Node From End of List
 51. N-Queens
 142. Linked List Cycle II
+169. Majority Element   求众数
 458. Poor Pigs
 498. Diagonal Traverse
