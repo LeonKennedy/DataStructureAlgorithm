@@ -7,6 +7,7 @@
 19. Remove Nth Node From End of List
 20. Valid Parentheses  
 23. Merge k Sorted Lists
+32. Longest Valid Parentheses
 51. N-Queens
 142. Linked List Cycle II
 169. Majority Element   求众数
