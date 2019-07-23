@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 # @Filename: SlidingWindowMaximum.py
 # @Author: olenji - lionhe0119@hotmail.com
-# @Description: 
+# @Description: https://leetcode.com/problems/sliding-window-maximum/ 滑动窗口最大值
 # @Create: 2019-07-22 19:06
 # @Last Modified: 2019-07-22 19:06
 

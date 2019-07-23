@@ -10,9 +10,11 @@
 32. Longest Valid Parentheses
 51. N-Queens
 70. Climbing Stairs
+104. Maximum Depth of Binary Tree
 142. Linked List Cycle II
 150. Evaluate Reverse Polish Notation  
 169. Majority Element   求众数
+226. Invert Binary Tree  
 239. Sliding Window Maximum
 458. Poor Pigs
 498. Diagonal Traverse
