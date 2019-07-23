@@ -10,6 +10,9 @@
 32. Longest Valid Parentheses
 51. N-Queens
 142. Linked List Cycle II
+150. Evaluate Reverse Polish Notation  
 169. Majority Element   求众数
+239. Sliding Window Maximum
 458. Poor Pigs
 498. Diagonal Traverse
+641. DesignCircularDeque
