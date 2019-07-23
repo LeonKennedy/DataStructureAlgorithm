@@ -9,6 +9,7 @@
 23. Merge k Sorted Lists
 32. Longest Valid Parentheses
 51. N-Queens
+70. Climbing Stairs
 142. Linked List Cycle II
 150. Evaluate Reverse Polish Notation  
 169. Majority Element   求众数
