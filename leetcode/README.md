@@ -9,7 +9,9 @@
 23. Merge k Sorted Lists
 32. Longest Valid Parentheses
 51. N-Queens
+69. Sqrt(x)
 70. Climbing Stairs
+98. Validate Binary Search Tree
 104. Maximum Depth of Binary Tree
 142. Linked List Cycle II
 150. Evaluate Reverse Polish Notation  
