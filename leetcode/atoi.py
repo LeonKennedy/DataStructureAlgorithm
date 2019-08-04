@@ -13,43 +13,37 @@ class Solution:
         :type str: str
         :rtype: int
         """
-        out = 0
-        sign = 1
-        i = 0
-        for c in str:
-          if c == ' ':
-            i += 1
-          else:
-            break
-        if len(str[i:])  == 0:
-          return 0
-        if str[i] == '-':
-            sign = -1
-            i += 1
-        elif str[i] == '+':
-            sign = -1
-            i += 1
-        if len(str[i:])  == 0:
-          return 0
-        for c in str[i:]:
-            if c >= '0' and c <= '9':
-                out = out * 10 + int(c)
-            else:
-                break
-        if out * sign > 2**31 - 1:
-            return 2**31 -1
-        if out * sign < -2**31:
-            return -2**31
-        return out * sign
+        import re
+        ret = re.search('^(([+|-]\d+)|\d+)', str.strip())
+        if ret:
+            ret = ret.group()
+            ret_int = int(ret)
+        else:
+            ret_int = 0
+        if ret_int > 2147483647:
+            ret_int = 2147483647
+        elif ret_int < -2147483648:
+            ret_int = -2147483648
+        return ret_int
+
                 
               
 
 if __name__ == "__main__":
   s = Solution()
   string = '    -234 efji 123'
-  string = ' '
-  string = ''
-  string = '-'
-  string = '+1'
-  print(s.myAtoi(string))
   assert -234 == s.myAtoi(string)
+  string = "words and 987"
+  assert 0 == s.myAtoi(string)
+  string = '-91283472332'
+  assert -2147483648 == s.myAtoi(string)
+  string = '3.141592'
+  assert 3 == s.myAtoi(string)
+  string = ''
+  assert 0 == s.myAtoi(string)
+  string = '-'
+  assert 0 == s.myAtoi(string)
+  string = "+-2"
+  assert 0 == s.myAtoi(string)
+  # print(s.myAtoi(string))
+

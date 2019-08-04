@@ -76,7 +76,7 @@ class TraversingBinaryTree:
 
 
 if __name__ == "__main__":
-    tree = CompleteBinaryTree()
+    tree = TraversingBinaryTree()
     for i in 'ABCDEFG':
         tree.append(i)
     print(tree)
