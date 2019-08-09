@@ -13,6 +13,7 @@
 70. Climbing Stairs
 98. Validate Binary Search Tree
 104. Maximum Depth of Binary Tree
+112. Path Sum
 142. Linked List Cycle II
 150. Evaluate Reverse Polish Notation 
 151. Reverse Words in a String 
