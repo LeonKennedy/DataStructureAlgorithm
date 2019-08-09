@@ -8,6 +8,7 @@
 20. Valid Parentheses  
 23. Merge k Sorted Lists
 32. Longest Valid Parentheses
+36. Valid Sudoku
 51. N-Queens
 69. Sqrt(x)
 70. Climbing Stairs
