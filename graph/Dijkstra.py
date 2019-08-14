@@ -14,9 +14,6 @@ import numpy as np
 Vertex = namedtuple('Vertex', 'dst, d')
 
 
-class Dijkstra:
-    pass
-
 
 class Graph:
 

@@ -1,3 +1,5 @@
+#Python
+__pycache__
 # Prerequisites
 *.d
 .idea
@@ -51,3 +53,4 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
