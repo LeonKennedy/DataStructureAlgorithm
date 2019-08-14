@@ -41,6 +41,7 @@ class Edge:
     def destination(self):
         return self._destination
 
+
 class AdjacencyMap(Graph):
 
     def __init__(self, is_directed=True):
@@ -97,7 +98,7 @@ class AdjacencyMap(Graph):
         except KeyError:
             return None
 
-    def degree(self, u,  out=True):
+    def degree(self, u, out=True):
         return len(self._outgoing[u] if out else self._incoming[u])
 
     def incident_edges(self, u, out=True):
@@ -131,7 +132,7 @@ if __name__ == '__main__':
     assert s.edge_count == 5
     assert s.vertex_count == 4
     assert {1, 2, 3, 4} == s.vertices
-    assert isinstance(s.get_edge(1,2), Edge)
+    assert isinstance(s.get_edge(1, 2), Edge)
     assert s.get_edge(2, 3) is None
     assert s.degree(2) == 2
     s.remove_edge(s.get_edge(1, 3))
@@ -153,4 +154,3 @@ if __name__ == '__main__':
     s.remove_vertex(3)
     assert s.edge_count == 3
     assert s.vertex_count == 3
-
