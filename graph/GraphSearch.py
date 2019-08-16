@@ -36,6 +36,9 @@ def deep_first_search(graph: AdjacencyMap, vertex):
         yield vv
 
 
+
+
+
 if __name__ == '__main__':
     g = AdjacencyMap(is_directed=False)
     g.insert_edges(1, 2)
