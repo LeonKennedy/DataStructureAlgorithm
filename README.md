@@ -28,6 +28,10 @@ coding practise
     - predecessor
     - append
     - pop
++ mheapq   实现了最大堆
++ TreeMap   平衡树
++ AVLTreeMap  
+
 
 #### graph
 图

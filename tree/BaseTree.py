@@ -123,9 +123,6 @@ class BinaryTree:
             x = x.p
         return None if x.p is None else x.p
 
-    def predecessor(self, value):
-        pass
-
     def pre_traversing(self):
         i = 1
         yield from self._ccc(i)
