@@ -26,4 +26,6 @@
 458. Poor Pigs
 498. Diagonal Traverse
 641. DesignCircularDeque
+872. Leaf-Similar Trees
+875. Koko Eating Bananas
 948. Bag of Tokens
